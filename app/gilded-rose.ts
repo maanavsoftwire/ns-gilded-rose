@@ -58,6 +58,17 @@ export class GildedRose {
                 case 'Sulfuras, Hand of Ragnaros':
                     // Sulfuras does not change in quality or sellIn
                     break;
+
+                case 'Conjured Mana Cake':
+                    if (item.quality > 0) {
+                        if (item.sellIn >= 0) {
+                            item.quality = item.quality - 2;
+                        } else {
+                            item.quality = item.quality - 4;
+                        }
+                    }
+                    item.quality = Math.max(item.quality, 0); // Ensure quality doesn't go below 0
+                    break;
                 default:
                     if (item.quality > 0) {
                         if (item.sellIn >= 0) {

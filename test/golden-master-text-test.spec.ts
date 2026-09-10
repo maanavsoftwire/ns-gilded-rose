@@ -82,6 +82,6 @@ describe('Gilded Rose Golden Master Test', function () {
 
         expect(items[0].name).to.equal('Conjured Mana Cake');
         expect(items[0].sellIn).to.equal(2);
-        expect(items[0].quality).to.equal(5);
+        expect(items[0].quality).to.equal(4);
     });
 });

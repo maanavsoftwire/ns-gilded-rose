@@ -137,13 +137,13 @@ describe('Backstage passes', function () {
 describe('Conjured items', function () {
     it('Quality degrades twice as fast as normal items', function() {
         const gildedRose = new GildedRose([
-            new Item('Conjured Mana Cake', 3, 6),
+            new Item('Conjured Mana Cake', 0, 6),
         ]);
 
         const items = gildedRose.updateQuality();
 
         expect(items[0].name).to.equal('Conjured Mana Cake');
-        expect(items[0].sellIn).to.equal(2);
-        expect(items[0].quality).to.equal(4);
+        expect(items[0].sellIn).to.equal(-1);
+        expect(items[0].quality).to.equal(2);
     });
 });
